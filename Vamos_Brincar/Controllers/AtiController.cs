@@ -24,6 +24,7 @@ namespace Vamos_Brincar.Controllers
         }
 
         // GET: Ati/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -31,12 +32,19 @@ namespace Vamos_Brincar.Controllers
 
         // POST: Ati/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(CrudProp atiInsert)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                if (ModelState.IsValid)
+                {
+                    if(ci.insertAti(atiInsert))
+                    {
+                        ViewBag.message = "Introduzido com sucesso! ";
+                        ModelState.Clear();
+                    }
+                }
                 return RedirectToAction("Index");
             }
             catch

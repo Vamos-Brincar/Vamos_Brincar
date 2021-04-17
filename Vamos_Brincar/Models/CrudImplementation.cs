@@ -36,5 +36,24 @@ namespace Vamos_Brincar.Models
  
             return ListaAtividade;
         }
+        public bool insertAti (CrudProp atiInsert)
+        {
+            string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
+            MySqlConnection mysqlconn = new MySqlConnection(mainconn);
+            string sqlquery = "insert into atividade (nome, data_at, descricao ,avaliacao) values ('"+atiInsert.nome+ "','" + atiInsert.data_at + "','" + atiInsert.descricao + "','" + atiInsert.avaliacao + "') ";
+            MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
+            mysqlconn.Open();
+            int i = sqlcomm.ExecuteNonQuery();
+            mysqlconn.Close();
+            if (i>= 1)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
