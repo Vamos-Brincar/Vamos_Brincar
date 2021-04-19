@@ -17,6 +17,13 @@ namespace Vamos_Brincar.Controllers
             return View(ci.GetAti());
         }
 
+        public ActionResult VamosBrincar()
+        {
+            return View();
+        }
+
+
+
         // GET: Ati/Details/5
         public ActionResult Details(int id)
         {
