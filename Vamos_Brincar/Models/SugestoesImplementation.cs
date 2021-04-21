@@ -56,5 +56,24 @@ namespace Vamos_Brincar.Models
                 return false;
             }
         }
+        public bool editsug(SugestoesProp sugedit)
+        {
+            string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
+            MySqlConnection mysqlconn = new MySqlConnection(mainconn);
+            string sqlquery = "update sugestao set sug='"+sugedit.sug+"' where id_sug='"+sugedit.id_sug+"'";
+            MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
+            mysqlconn.Open();
+            int i = sqlcomm.ExecuteNonQuery();
+            mysqlconn.Close();
+
+            if (i >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

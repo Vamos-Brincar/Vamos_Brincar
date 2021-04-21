@@ -57,16 +57,16 @@ namespace Vamos_Brincar.Controllers
         // GET: Sug/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(si.GetSug().Find(itmodel =>itmodel.id_sug==id));
         }
 
         // POST: Sug/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, SugestoesProp updatesug)
         {
             try
             {
-                // TODO: Add update logic here
+                si.editsug(updatesug);
 
                 return RedirectToAction("Index");
             }

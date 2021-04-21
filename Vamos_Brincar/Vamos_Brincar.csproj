@@ -316,6 +316,7 @@
     <Content Include="Views\Sug\Create.cshtml" />
     <Content Include="Views\Sug\Index.cshtml" />
     <Content Include="Views\Patro\Index.cshtml" />
+    <Content Include="Views\Sug\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
