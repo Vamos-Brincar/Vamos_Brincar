@@ -16,7 +16,6 @@ namespace Vamos_Brincar.Controllers
             ModelState.Clear();
             return View(ci.GetAti());
         }
-        //-----------------------CONTROLADORES DO OUTRO PROJETO-------------------------------
         public ActionResult VamosBrincar()
         {
             return View();
@@ -39,10 +38,6 @@ namespace Vamos_Brincar.Controllers
         {
             return View();
         }
-        public ActionResult Contact()
-        {
-            return View();
-        }
         public ActionResult Crianca()
         {
             return View();
@@ -59,7 +54,7 @@ namespace Vamos_Brincar.Controllers
         {
             return View();
         }
-        //-----------------------------------------------------------------------------
+       
 
 
         // GET: Ati/Details/5
