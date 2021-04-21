@@ -16,7 +16,7 @@ namespace Vamos_Brincar
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Ati", action = "VamosBrincar", id = UrlParameter.Optional }
+                defaults: new { controller = "Ati", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

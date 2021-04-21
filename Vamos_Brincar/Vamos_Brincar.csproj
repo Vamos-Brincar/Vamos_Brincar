@@ -201,7 +201,6 @@
     <Content Include="assets\img\team\nuno.jpg" />
     <Content Include="assets\img\team\pedro.jpg" />
     <Content Include="assets\img\team\pico.jpg" />
-    <Content Include="assets\img\team\ricardo.png" />
     <Content Include="assets\img\team\tiago.jpg" />
     <Content Include="assets\mail\contact_me.js" />
     <Content Include="assets\mail\contact_me.php" />
@@ -304,13 +303,7 @@
     <Content Include="Views\Ati\Index.cshtml" />
     <Content Include="Views\Ati\Create.cshtml" />
     <Content Include="Views\Ati\VamosBrincar.cshtml" />
-<<<<<<< Updated upstream
     <Content Include="Views\Patro\Index.cshtml" />
-=======
-    <Content Include="Views\Ati\About.cshtml" />
-    <Content Include="Views\Ati\Index_Crianca.cshtml" />
-    <Content Include="Views\Ati\Jogos.cshtml" />
->>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
