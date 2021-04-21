@@ -305,6 +305,8 @@
     <Content Include="Views\Ati\VamosBrincar.cshtml" />
     <Content Include="Views\Crianca\Index.cshtml" />
     <Content Include="Views\Crianca\Create.cshtml" />
+    <Content Include="Views\Crianca\Edit.cshtml" />
+    <Content Include="Views\Crianca\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
