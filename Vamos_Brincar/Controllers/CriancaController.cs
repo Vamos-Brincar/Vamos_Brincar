@@ -20,7 +20,7 @@ namespace Vamos_Brincar.Controllers
         // GET: Crianca/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(cc.GetCri().Find(itermodel => itermodel.id_crianca == id));
         }
 
         // GET: Crianca/Create
@@ -57,17 +57,17 @@ namespace Vamos_Brincar.Controllers
         // GET: Crianca/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(cc.GetCri().Find(itermodel=>itermodel.id_crianca ==id));
         }
 
         // POST: Crianca/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Criancamod updatecri)
         {
             try
             {
                 // TODO: Add update logic here
-
+                cc.editCri(updatecri);
                 return RedirectToAction("Index");
             }
             catch
@@ -79,7 +79,8 @@ namespace Vamos_Brincar.Controllers
         // GET: Crianca/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            cc.deletecri(id);
+            return RedirectToAction("Index");
         }
 
         // POST: Crianca/Delete/5

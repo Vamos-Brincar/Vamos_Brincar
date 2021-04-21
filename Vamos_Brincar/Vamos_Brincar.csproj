@@ -165,15 +165,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AtiController.cs" />
+    <Compile Include="Controllers\CriancaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PatroController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Criancamod.cs" />
+    <Compile Include="Models\Crudcrianca.cs" />
     <Compile Include="Models\CrudImplementation.cs" />
     <Compile Include="Models\CrudProp.cs" />
-    <Compile Include="Models\PatrocinioImplementation.cs" />
-    <Compile Include="Models\PatrocinioProp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -303,7 +303,10 @@
     <Content Include="Views\Ati\Index.cshtml" />
     <Content Include="Views\Ati\Create.cshtml" />
     <Content Include="Views\Ati\VamosBrincar.cshtml" />
-    <Content Include="Views\Patro\Index.cshtml" />
+    <Content Include="Views\Crianca\Index.cshtml" />
+    <Content Include="Views\Crianca\Create.cshtml" />
+    <Content Include="Views\Crianca\Edit.cshtml" />
+    <Content Include="Views\Crianca\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

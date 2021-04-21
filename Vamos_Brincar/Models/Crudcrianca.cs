@@ -61,7 +61,7 @@ namespace Vamos_Brincar.Models
         {
             string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
             MySqlConnection mysqlconn = new MySqlConnection(mainconn);
-            string sqlquery = "update crianca set nome='" + criEdit.nome + "'idade='" + criEdit.idade + "'pass='"+criEdit.pass+"' where id_crianca='"+criEdit.id_crianca+"'";
+            string sqlquery = "update crianca set nome='" + criEdit.nome + "'where id_crianca='"+criEdit.id_crianca+"'";
             MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
             mysqlconn.Open();
             int i = sqlcomm.ExecuteNonQuery();
@@ -76,7 +76,25 @@ namespace Vamos_Brincar.Models
                 return false;
             }
         }
+        public bool deletecri(int id)
+        {
+            string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
+            MySqlConnection mysqlconn = new MySqlConnection(mainconn);
+            string sqlquery = "Delete From crianca where id_crianca =" + id;
+            MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
+            mysqlconn.Open();
+            int i = sqlcomm.ExecuteNonQuery();
+            mysqlconn.Close();
+            if (i >= 1)
+            {
+                return true;
 
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
 
