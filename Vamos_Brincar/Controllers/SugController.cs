@@ -21,7 +21,7 @@ namespace Vamos_Brincar.Controllers
         // GET: Sug/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(si.GetSug().Find(itmodel => itmodel.id_sug == id));
         }
 
         // GET: Sug/Create
@@ -77,9 +77,11 @@ namespace Vamos_Brincar.Controllers
         }
 
         // GET: Sug/Delete/5
+        [HttpGet]
         public ActionResult Delete(int id)
         {
-            return View();
+            si.deletesug(id);
+            return RedirectToAction("Index");
         }
 
         // POST: Sug/Delete/5

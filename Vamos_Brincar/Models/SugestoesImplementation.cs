@@ -75,5 +75,24 @@ namespace Vamos_Brincar.Models
                 return false;
             }
         }
+        public bool deletesug (int id)
+        {
+            string mainconn = ConfigurationManager.ConnectionStrings["MysqlConnection"].ConnectionString;
+            MySqlConnection mysqlconn = new MySqlConnection(mainconn);
+            string sqlquery = "Delete from sugestao where id_sug="+id;
+            MySqlCommand sqlcomm = new MySqlCommand(sqlquery, mysqlconn);
+            mysqlconn.Open();
+            int i = sqlcomm.ExecuteNonQuery();
+            mysqlconn.Close();
+
+            if (i >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
