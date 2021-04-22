@@ -16,51 +16,6 @@ namespace Vamos_Brincar.Controllers
             ModelState.Clear();
             return View(ci.GetAti());
         }
-        //-----------------------CONTROLADORES DO OUTRO PROJETO-------------------------------
-        public ActionResult VamosBrincar()
-        {
-            return View();
-        }
-        public ActionResult Patrocinadores()
-        {
-            return View();
-        }
-        public ActionResult Jogos()
-        {
-            return View();
-        }
-
-        public ActionResult Privacy()
-        {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            return View();
-        }
-        public ActionResult Contact()
-        {
-            return View();
-        }
-        public ActionResult Crianca()
-        {
-            return View();
-        }
-        public ActionResult Instituicao()
-        {
-            return View();
-        }
-        public ActionResult Index_Crianca()
-        {
-            return View();
-        }
-        public ActionResult Avaliar()
-        {
-            return View();
-        }
-        //-----------------------------------------------------------------------------
-
 
         // GET: Ati/Details/5
         public ActionResult Details(int id)

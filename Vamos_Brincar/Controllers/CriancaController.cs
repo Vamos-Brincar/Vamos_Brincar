@@ -16,7 +16,14 @@ namespace Vamos_Brincar.Controllers
             ModelState.Clear();
             return View(cc.GetCri());
         }
-
+        public ActionResult Index_Crianca() 
+        {
+            return View();
+                }
+        public ActionResult Jogos()
+        {
+            return View();
+        }
         // GET: Crianca/Details/5
         public ActionResult Details(int id)
         {
